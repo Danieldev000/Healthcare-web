@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/bootstrap/css/mdb.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Home</title>
+    <style>
+/* HEADER */
+    .header{
+        background-color: teal;
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+    }
+    .header .logo{
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+    .header .logo i{
+        color: #ff1e009e;
+        margin-right: 10px;
+        font-size: 30px;
+    }
+    .header .logo p{
+        margin: 0;
+        font-size: 20px;
+        color: white;
+    }
+
+    .header .menu{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+    }
+    .header .menu a{
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+        margin: 0;
+    }
+    .header .menu a:hover{
+        color: #ff1e009e;
+    }
+
+    .header .auth{
+        height: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    .header .auth .login{
+        margin-right: 20px;
+        color: white;
+        font-size: 15px;
+    } 
+    .header .auth .signUp{
+        box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.15),0 4px 18px 0 rgba(255, 255, 255, 0.1);
+        padding: 10px 18px;
+        color: white;
+        border-radius: 10px;
+        font-size: 15px;
+    }
+/* END HEADER */
+
+/* HERO */
+    .hero{
+        background-image: linear-gradient(teal, #008B8B, #20B2AA);
+        padding: 20px 0;
+    }
+    .hero .landing-text-container{
+        display: flex;
+        padding: 50px 0;
+    }
+    .hero .landing-text .title{
+        font-size: 32px;
+        color: white;
+        width: 70%;
+    }
+    .hero .landing-text .para{
+        font-size: 24px;
+        color: white;
+        margin-bottom: 5px;
+    }
+    .hero .landing-text .heart-color{
+        color: #ff1e009e !important;
+        font-weight: bold;
+    }
+/* END HERO */
+
+
+/* OFFER */
+    .offers{
+        
+    }
+    .offers .row{
+        position: relative;
+    }
+    .offers .services{
+        margin-top: 120px;
+        margin-bottom: 120px;
+    }
+    .offers .service-container{
+        display: flex;
+        justify-content: center;
+        /* background-color: black; */
+    }
+    .offers .service{
+        /* background-color: #20B2AA; */
+        display: flex;
+        justify-content: center;
+    }
+    .offers .service .card{
+        width: 20rem;
+        box-shadow: none !important;
+    }
+    .offers .service .card .card-body{
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+    .offers .service .card .card-body a{
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        color: teal;
+        padding: 20px 30px;
+        transition: 0.5s ease-out;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        width: 100%;
+        font-size: 15px;
+    }
+    .offers .service .card .card-body a:hover{
+        transition: 0.5s ease-in;
+        color: white;
+        padding: 20px 30px;
+        background-color: #008B8B;
+        border-radius: 10px;
+        width: 100%;
+    }
+    .offers .service .card .image{
+        width: 100%;
+        height: 300px;
+    }
+    .offers .service .card  img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .offers .oval-top{
+        width: 100%;
+        height: 170px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+    }
+    .offers .oval-top i{
+        margin-top: 40px;
+        color: #ff1e009e;
+    }
+/* END OFFER */
+
+/* ABOUT */
+    .about{
+        padding: 50px 0;
+    }
+    .about .about-text-container{
+        display: flex;
+        justify-content: center;
+    }
+    .about .about-image-container{
+        display: flex;
+        justify-content: center;
+    }
+    .about .about-text{
+
+    }
+    .about .about-text .title{
+        margin: 0;
+        color: #ff1e009e;
+        font-size: 16px;
+    }
+    .about .about-text .sub-title{
+        margin: 10px 0 0 0;
+        font-size: 28px;
+        font-weight: bold;
+        color: teal;
+        margin-bottom: 50px;
+    }
+    .about .about-text .more{
+        color: teal;
+        padding: 15px 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 2px teal;
+        transition: 0.5s ease-in;
+        font-size: 15px;
+    }
+    .about .about-text .more:hover{
+        background-color: teal;
+        color: white;
+        transition: 0.5s ease-in;
+    }
+    .about .about-text .heart-color{
+        /* color: #ff1e009e !important; */
+    }
+    .about .about-image{
+        position: relative;
+        width: 50%;
+    }
+    .about .about-image img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .about .about-image .back-image{
+        background-color: teal;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: -20px;
+        right: 20px;
+        z-index: -1;
+        border-radius: 10px;
+    }
+/* END ABOUT */
+
+/* TESTIMONIALS */
+    .testimonials{
+        padding: 20px 0;
+    }
+    .testimonial .row{
+        /* position: relative; */
+    }
+    .testimonials .title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .testimonials .title .para1{
+        font-size: 16px;
+        text-align: center;
+        color: #ff1e009e;
+        margin: 0;
+    }
+    .testimonials .title .para2{
+        font-weight: 700;
+        font-size: 36px;
+        text-align: center;
+        color: teal;
+        margin: 0;
+    }
+    .testimonials .title .para3{
+        font-weight: 400;
+        font-size: 18px;
+        text-align: center;
+        color: #363636;
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    .testimonials .testimonial{
+        background-color: transparent;
+        box-shadow: 0 0 10px 2px black;
+        padding: 20px;
+        border-radius: 10px;
+        color: #363636 !important;
+        margin: 10px 0;
+    }
+    .testimonials .testimonial .profile-picture{
+        background: #ff1e009e;
+        padding: 2px;
+        width: fit-content;
+        border-radius: 50%;
+    }
+    .testimonials .testimonial .profile-picture img{}
+    .testimonials .testimonial .comment{
+        margin-top: 10px;
+    }
+    .testimonials .testimonial .name{
+        margin-bottom: 5px;
+        color: teal;
+        font-weight: bold;
+    }
+    .testimonials .testimonial .utype{
+        margin: 0;
+    }
+
+/* END TESTIMONIALS */
+
+
+/* FAQ */
+    .FAQs{
+        background-color: #008B8B;
+        padding: 40px 0;
+        margin-top: 50px;
+    }
+    .FAQs .FAQ{
+        margin: 10px 0;
+    }
+    .FAQs .title p{
+        margin-bottom: 15px;
+        font-size: 30px;
+        color:#ff1e009e;
+        font-weight: bold;
+    }
+    .FAQs button{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .FAQs button p{
+        margin: 0;
+    }
+    .FAQs button i{
+        background-color: #ff1e009e;
+        padding: 10px;
+        border-radius: 50%;
+        color: white;
+    }
+    .FAQs .accordion {
+    background-color: white;
+    color: #363636;
+    cursor: pointer;
+    padding: 15px 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    border-radius: 10px 10px 0 0;
+    }
+
+    .FAQs .active, .accordion:hover {
+    background-color: #ccc;
+    }
+
+    .FAQs .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white !important;
+    overflow: hidden;
+    font-size: 15px;
+    border-radius: 0 0 10px 10px;
+    color: #363636;
+    }
+    .FAQs .more{
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+    }
+    .FAQs .more a{
+        background-color: #ff1e009e;
+        color: white;
+        padding: 15px 35px;
+        border-radius: 10px;
+        font-size: 15px;
+    }
+/* END FAQ */
+
+/* FOOTER */
+    .footer{
+        background-color: #20B2AA;
+        padding: 100px 0;
+    }
+    .footer .logo-description{
+
+    }
+    .footer .logo-description .logo{
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    .footer .logo-description .logo i{
+        color: #ff1e009e;
+        margin-right: 10px;
+        font-size: 30px;
+    }
+    .footer .logo-description .logo p{
+        margin: 0;
+        font-size: 20px;
+        color: white;
+    }
+    .footer .logo-description .description{
+        margin: 0;
+        color: white;
+    }
+    .footer .pages-container{
+        display: flex;
+        justify-content: center;
+    }
+    .footer .pages p{
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 35px;
+        color: white;
+    }
+    .footer .pages .links{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer .pages .links a{
+        margin: 0 0 15px 0;
+        color: white;
+    }
+    .footer .pages .links a:hover{
+        color: #ff1e009e;
+    }
+    .footer .contact-container{
+
+    }
+    .footer .contact p{
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 35px;
+        color: white;
+    }
+    .footer .contact div p{
+        margin: 0 0 15px 0;
+        color: white;
+        font-weight: normal !important;
+    }
+/* END FOOTER */
+
+/* COPYRITE */
+.copyrite{
+    background-color: white;
+    padding: 20px 0;
+}
+.copyrite .copyrite-text p{
+    margin: 0;
+    color: #363636;
+}
+.copyrite .links-container{
+    display: flex;
+    justify-content: end;
+}
+.copyrite .links a{
+    color: #363636;
+    margin-left: 15px;
+}
+.copyrite .links a:hover{
+    color: #ff1e009e;
+}
+/* END COPYRITE */
+
+</style>
+</head>
+<body>
+    <div class="container-fluid header">
+        <div class="container">
+            <div class="row">
+                <div class="col logo-container">
+                    <div class="logo">
+                        <i class="fa fa-heartbeat" aria-hidden="true"></i>
+                        <p>Healthcare</p>
+                    </div>
+                </div>
+                <div class="col menu-container">
+                    <div class="menu">
+                        <a href="">Home</a>
+                        <a href="">About</a>
+                        <a href="">Services</a>
+                    </div>
+                </div>
+                <div class="col auth-container">
+                    <div class="auth">
+                        <a href="#" class="login">Login</a>
+                        <a href="#" class="signUp">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid hero">
+        <div class="container">
+            <div class="row position-relative">
+                <div class="col landing-text-container">
+                    <div class="landing-text">
+                        <p class="title">YOUR <span class="heart-color">HEALTH</span> IS OUR PRIORITY.</p>
+                        <p class="para">We Connect a Patient to</p>
+                        <p class="heart-color">a Doctor / Medical Consultant.</p>   
+                    </div>
+                </div>
+                <div class="col landing-banner-container">
+                    <div class="landing-banner">
+                        <img src="assets/images/landing-banner.png" alt="landing banner">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid about">
+        <div class="container">
+            <div class="row">
+                <div class="col about-image-container">
+                    <div class="about-image">
+                        <img src="assets/images/consulation.jpg" alt="">
+                        <div class="back-image"></div>
+                    </div>
+                </div>
+                <div class="col about-text-container">
+                    <div class="about-text">
+                        <p class="title">WHAT WE DO</p>
+                        <p class="sub-title">We connect anyone from around the world to seek advice/medical describtion from a <span class="heart-color">Doctor or Medical Consultant.</span></p>
+                        <a href="" class="more">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid offers">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 oval-top"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+                <div class="row services">
+                    <div class="col service-container">
+                        <div class="service">
+                            <div class="card">
+                                <div class="image">
+                                    <img src="assets/images/consulation.jpg" alt="consulation">
+                                </div>
+                                <div class="card-body">
+                                    <a href="" class="position-relative">Medical Consulation</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col service-container">
+                        <div class="service">
+                            <div class="card">
+                                <div class="image">
+                                    <img src="assets/images/doctor.jpg" alt="consulation">
+                                </div>
+                                <div class="card-body">
+                                    <a href="" class="position-relative">Doctor</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col service-container">
+                        <div class="service">
+                            <div class="card">
+                                <div class="image">
+                                    <img src="assets/images/donate.jpg" alt="consulation">
+                                </div>
+                                <div class="card-body">
+                                    <a href="" class="position-relative">Donate</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid testimonials">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 title">
+                    <p class="para1">WE’RE LOVED BY MANY</p>
+                    <p class="para2">What people say about us</p>
+                    <p class="para3">It’s better to hear from the horses mouth see below few among happy patients we have helped there healthstatus</p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 testimonial-container">
+                    <div class="testimonial">
+                        <div class="profile-picture">
+                            <img src="assets/images/Mask group(1).png" alt="">
+                        </div>
+                        <p class="comment">Duis aute irure dolor in reprehenderit in voluptate.
+                            Duis aute irure dolor in. Duis aute irure dolor.</p>
+                        <p class="name">Emmmanuel Kate</p>
+                        <p class="utype">Patient</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 testimonial-container">
+                    <div class="testimonial">
+                        <div class="profile-picture">
+                            <img src="assets/images/Mask group(2).png" alt="">
+                        </div>
+                        <p class="comment">Duis aute irure dolor in reprehenderit in voluptate.
+                            Duis aute irure dolor in. Duis aute irure dolor.</p>
+                        <p class="name">Festus Brown</p>
+                        <p class="utype">Medical Consultant</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 testimonial-container">
+                    <div class="testimonial">
+                        <div class="profile-picture">
+                            <img src="assets/images/Mask group(3).png" alt="">
+                        </div>
+                        <p class="comment">Duis aute irure dolor in reprehenderit in voluptate.
+                            Duis aute irure dolor in. Duis aute irure dolor.</p>
+                        <p class="name">Hannah Blues</p>
+                        <p class="utype">Patient</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 testimonial-container">
+                    <div class="testimonial">
+                        <div class="profile-picture">
+                            <img src="assets/images/Mask group(4).png" alt="">
+                        </div>
+                        <p class="comment">Duis aute irure dolor in reprehenderit in voluptate.
+                            Duis aute irure dolor in. Duis aute irure dolor.</p>
+                        <p class="name">Daniel Jarien</p>
+                        <p class="utype">Doctor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid FAQs">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 title">
+                    <p>Frequently asked questions</p>
+                </div>
+                <div class="col-12 FAQ">
+                    <button class="accordion"><p>Is it free ?</p><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    <div class="panel">
+                        <p>Yes it is free</p>
+                    </div>
+                </div>
+                <div class="col-12 FAQ">
+                    <button class="accordion"><p>How do i communicate ?</p><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    <div class="panel">
+                        <p>Zoom meeting or text messages</p>
+                    </div>
+                </div>
+                <div class="col-12 FAQ">
+                    <button class="accordion"><p>Can i donate ?</p><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    <div class="panel">
+                        <p>Yes you can donate</p>
+                    </div>
+                </div>
+                <div class="col-12 FAQ">
+                    <button class="accordion"><p>When i need urgent physical attention what will you do ?</p><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    <div class="panel">
+                        <p>We help you contact a nearby hospital, doctor or medical consultant</p>
+                    </div>
+                </div>
+                <div class="col-12 FAQ">
+                    <button class="accordion"><p>Is there a premeium subscription ?</p><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    <div class="panel">
+                        <p>No there is not a premeium subscription</p>
+                    </div>
+                </div>
+                <div class="col-12 more">
+                    <a href="">View All</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid footer">
+        <div class="container">
+            <div class="row">
+                <div class="col logo-description-container">
+                    <div class="logo-description">
+                        <div class="logo">
+                            <i class="fa fa-heartbeat" aria-hidden="true"></i>
+                            <p>Healthcare</p>
+                        </div>
+                        <div class="description">
+                            <p>We connect anyone from around the world to seek advice/medical describtion from a Doctor or Medical Consultant.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col pages-container">
+                    <div class="pages">
+                        <p>Pages</p>
+                        <div class="links">
+                            <a href="">Home</a>
+                            <a href="">About</a>
+                            <a href="">Services</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col contact-container">
+                    <div class="contact">
+                        <p>Contact</p>
+                        <div>
+                            <p>Email: Support@quickfluencer,com</p>
+                            <p>Phone: +1 99 6721 8452  |   +1 72 4273 7274</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid copyrite">
+        <div class="container">
+            <div class="row">
+                <div class="col copyrite-text">
+                    <p>© 2022 Copyright, All Right Reserved</p>
+                </div>
+                <div class="col links-container">
+                    <div class="links">
+                        <a href="">FAQ</a>
+                        <a href="">Terms & Conditions</a>
+                        <a href="">Privacy & Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/mdb.min.js"></script>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+            panel.style.display = "none";
+            } else {
+            panel.style.display = "block";
+            }
+        });
+        }
+    </script>
+</body>
+</html>
